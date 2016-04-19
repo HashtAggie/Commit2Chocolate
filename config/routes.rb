@@ -15,7 +15,7 @@ Rails.application.routes.draw do
  #     sessions: 'users/sessions'
  #   }
  # end
- root to: "products#index"
+ root to: "welcome#index"
 
  get 'welcome/about' => 'welcome#about'
  get 'welcome/contact' => 'welcome#contact'
