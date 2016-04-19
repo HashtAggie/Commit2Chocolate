@@ -8,7 +8,7 @@ class ShoppingCartsController < ApplicationController
   end
 
   def show
-
+    @shopping_cart
   end
 
   private
@@ -17,5 +17,4 @@ class ShoppingCartsController < ApplicationController
     @shopping_cart = session[:shopping_cart_id] ? ShoppingCart.find(shopping_cart_id) : ShoppingCart.create
     session[:shopping_cart_id] = @shopping_cart.id
   end
-end
 end
