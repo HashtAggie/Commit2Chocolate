@@ -5,8 +5,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :products
-  resource :shopping_cart
-
+  
  #  Rails.application.routes.draw do
 
 
