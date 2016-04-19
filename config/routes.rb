@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   get 'user/index'
 
   devise_for :users
@@ -7,11 +9,16 @@ Rails.application.routes.draw do
  #  Rails.application.routes.draw do
 
 
+  get 'welcome/index'
+
  #   devise_for :users, controllers: {
  #     sessions: 'users/sessions'
  #   }
  # end
  root to: "products#index"
+
+ get 'welcome/about' => 'welcome#about'
+ get 'welcome/contact' => 'welcome#contact'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
