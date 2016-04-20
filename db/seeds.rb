@@ -6,6 +6,7 @@ Product.create( name: "Chocolate milk and rum", category: "Chocolate milk", desc
 Product.create( name: "Dark chocolate milk", category: "Chocolate milk", description: "On a cold winter day warm yourself with this liquid gold.", price: 6, quantity: 100, image: "chocolatemilk2.jpg" )
 Product.create( name: "Skinny chocolate milk", category: "Chocolate milk", description: "For all you skinny bitches out there.", price: 8, quantity: 200, image: "chocolatemilk3.jpg" )
 Product.create( name: "Strawberries", category: "Chocolate covered fruit", description: "10 super fresh sweet chocolate covered strawberries.", price: 8, quantity: 30, image: "strawberry.jpg" )
+Product.create( name: "Marsmallows", category: "Sweets", description: "The ultimate experience.", price: 5, quantity: 101, image: "marshmallows.jpg" )
 Product.create( name: "Cherries", category: "Chocolate covered fruit", description: "10 super fresh sweet chocolate covered cherries.", price: 8, quantity: 30, image: "cherry.jpg" )
 Product.create( name: "Banana", category: "Chocolate covered fruit", description: "10 super fresh sweet chocolate covered bananas.", price: 8, quantity: 30, image: "banana.jpg" )
 Product.create( name: "Hazelnuts",   category: "Going nuts", description: "The perfect combination of crunchy hazelnuts covered in the best chocolate." , price: 5, quantity: 46, image: "hazelnuts.jpg" )
