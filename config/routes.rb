@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'shopping_cart_items/destroy'
 
   get 'welcome/index'
+  get 'welcome/responds'
 
  #   devise_for :users, controllers: {
  #     sessions: 'users/sessions'
