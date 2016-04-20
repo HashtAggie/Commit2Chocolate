@@ -1,6 +1,14 @@
 <p id="notice"><%= notice %></p>
+<% if current_user %>
 
-<h1>Listing Products</h1>
+<h2>Welcome, <%= current_user.handle %></h2><br>
+
+
+<% else %>
+<h1>Welcome</h1>
+<% end %>
+
+<h3>This is our collection</h3>
 
 <table>
   <thead>
