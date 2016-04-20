@@ -22,8 +22,9 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @product.image %>
+  <%= image_tag (@product.image) %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+<%= link_to 'Add to cart', shopping_cart_items_path(@product, quantity: 1), method: :post %>
