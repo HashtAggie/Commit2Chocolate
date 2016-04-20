@@ -8,7 +8,7 @@ Product.create( name: "Skinny chocolate milk", category: "Chocolate milk", descr
 Product.create( name: "Strawberries", category: "Chocolate covered fruit", description: "10 super fresh sweet chocolate covered strawberries.", price: 8, quantity: 30, image: "strawberry.jpg" )
 Product.create( name: "Cherries", category: "Chocolate covered fruit", description: "10 super fresh sweet chocolate covered cherries.", price: 8, quantity: 30, image: "cherry.jpg" )
 Product.create( name: "Banana", category: "Chocolate covered fruit", description: "10 super fresh sweet chocolate covered bananas.", price: 8, quantity: 30, image: "banana.jpg" )
-Product.create( name: "Hazelnuts", category: "Going nuts", description: "The perfect combination of crunchy hazelnuts covered in the best chocolate." , price: 5, quantity: 46, image: "hazelnuts.png" )
+Product.create( name: "Hazelnuts", category: "Going nuts", description: "The perfect combination of crunchy hazelnuts covered in the best chocolate." , price: 5, quantity: 46, image: "hazelnuts.jpg" )
 Product.create( name: "Pecans", category: "Going nuts", description: "The perfect combination of crunchy pecans covered in the best chocolate.", price: 5, quantity: 88, image: "pecans.jpg")
 Product.create( name: "Almonds", category: "Going nuts", description: "The perfect combination of crunchy almonds covered in the best chocolate.",  price: 5, quantity: 99, image: "almonds.jpg" )
 Product.create( name: "Peanuts", category: "Going nuts", description: "The perfect combination of crunchy peanuts covered in the best chocolate.", price: 5, quantity: 101, image: "peanuts.jpg" )
