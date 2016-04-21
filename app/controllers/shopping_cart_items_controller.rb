@@ -14,10 +14,10 @@ class ShoppingCartItemsController < ApplicationController
   def destroy
   end
 
-    protected
+  protected
 
     def shopping_cart_item_params
-      params.permit(:product_id, :quantity)
+      params.permit(:product_id, :product_name, :quantity)
     end
 
 end

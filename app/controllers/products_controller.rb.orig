@@ -3,12 +3,13 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
-def index
-  @products = Product.all
+  def index
+    @products = Product.all
     if params[:search]
       @products = Product.search(params[:search])
     else
-       print "Sorry your product is not here. Try again!"
+<<<<<<< HEAD
+      @products = Product.all.order('created_at DESC')
     end
 
     @cart = []
@@ -16,10 +17,13 @@ def index
       if @products.exists?(id)
         product = @products.find(id)
         product.quantity = quantity
-          product.price = (quantity * product.price)
+        product.price = (quantity * product.price)
         @cart << product
       end
     end
+=======
+      print "Sorry your product is not here. Try again!"
+>>>>>>> 765dca2052accd418001709d970c40f8ec9c2f04
   end
 
   # GET /products/1
