@@ -9,8 +9,18 @@ class ProductsController < ApplicationController
       @products = Product.search(params[:search]).order("created_at DESC")
     else
       @products = Product.all.order('created_at DESC')
+    end
+
+    @cart = []
+    session[:shopping_cart].each do |id, quantity|
+      if @products.exists?(id)
+        product = @products.find(id)
+        product.quantity = quantity
+        product.price = (quantity * product.price)
+        @cart << product
+      end
+    end
   end
-end
 
   # GET /products/1
   # GET /products/1.json

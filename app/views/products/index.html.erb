@@ -1,38 +1,46 @@
 <p id="notice"><%= notice %></p>
 <% if current_user %>
 
-<h2>Welcome, <%= current_user.handle %></h2><br>
+<main class='container'>
+  <h2>Welcome, <%= current_user.handle %></h2><br>
 
 
-<% else %>
-<h1>Welcome</h1>
-<% end %>
+  <% else %>
+  <h1>Welcome</h1>
+  <% end %>
 
-<h3>This is our collection</h3>
+  <h3>This is our collection</h3>
 
 
-<%= form_tag(products_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
-<%= submit_tag "Search" %>
-<% end %>
+  <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
+    <%= submit_tag "Search" %>
+  <% end %>
 
-<br>
-<br>
-<% @products.each do |product| %>
-      <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <%= image_tag (product.image), size: "220x220"%>
-        <div class="caption">
-          <h3><%= product.name %></h3>
-          <h4>€ <%= product.price %></h4>
-          <p><%= link_to 'Show', product, class: "btn btn-default" %><%= link_to 'Add to cart', shopping_cart_items_path(product_id: product.id, quantity: 1), method: :post, class: "btn btn-default" %> </p>
+  <div class='row'>
+    <% @products.each do |product| %>
+        <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <%= image_tag (product.image), size: "220x220"%>
+          <div class="caption">
+            <h3><%= product.name %></h3>
+            <h4>€ <%= product.price %></h4>
+            <p><%= link_to 'Show', product, class: "btn btn-default" %><%= link_to 'Add to cart', shopping_cart_items_path(product_id: product.id, quantity: 1), method: :post, class: "btn btn-default" %> </p>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
+  </div>
 
-<% end %>
+</main>
 
-<br>
 <footer>
-<pre><%= session[:shopping_cart] %></pre>
+  <div>
+    <p>In shopping cart:</p>
+    <% @cart.each do |product| %>
+    <p><%= product.quantity %> x <%= product.name %> </p>
+    <p>€ <%= product.price %></p>
+    <% end %>
+  </div>
+
 </footer>
