@@ -3,12 +3,12 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
-  def index
-    @products = Product.all
+def index
+  @products = Product.all
     if params[:search]
       @products = Product.search(params[:search])
     else
-      print 
+       print "Sorry your product is not here. Try again!"
     end
 
     @cart = []
