@@ -11,11 +11,11 @@
 100% { left: -400%; }
 }
 
-body {padding-top: 5%; text-align: center;}
+body {padding-top: 4%; text-align: center;}
 div#slider { overflow: hidden; }
 div#slider figure img { width: 20%;float: left; }
 div#slider figure {
-  position: absolute;
+  position: fixed;
   width: 500%;
   margin: 0;
   left: 0;
@@ -25,6 +25,7 @@ div#slider figure {
   max-width: none;
   max-height: none;
 }
+
 
 #polina {
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
