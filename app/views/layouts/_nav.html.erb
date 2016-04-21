@@ -12,13 +12,12 @@
        <ul class="nav navbar-nav">
           <li><%= link_to "Our Products", products_path %></li>
           <li><%=  link_to "About", welcome_about_path %></li>
-
           <li><%=  link_to "Contact us", welcome_contact_path %></li>
        </ul>
 
        <ul class="nav navbar-nav navbar-right">
          <button class="btn btn-default btn-xs" type="button">
-           Messages <span class="badge">4</span>
+           Messages <span class="badge">0</span>
          </button>
           <% if current_user %>
             <li><%= "Your Profile"%></li>
