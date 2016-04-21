@@ -1,35 +1,19 @@
-#polina {
-  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-  font-weight:100;
-  background: rgba(0,0,0,0.3);
-  color: white;
-  padding: 2rem;
-  width: 33%;
-  margin:2rem;
-  float: right;
-  font-size: 1.2rem;
-}
-h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-top: 0;
-  letter-spacing: .3rem;
-}
-#polina button {
-  display: block;
-  width: 80%;
-  padding: .4rem;
-  border: none;
-  margin: 1rem auto;
-  font-size: 1.3rem;
-  background: rgba(255,255,255,0.23);
+
+a {
+  display: inline-block;
   color: #fff;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: .3s background;
+  text-decoration: none;
+  background:rgba(0,0,0,0.5);
+  padding: .5rem;
+  transition: .6s background;
 }
-#polina button:hover {
-   background: rgba(0,0,0,0.5);
+a:hover{
+  background:rgba(0,0,0,0.5);
+}
+
+#message {
+  width: 40vw;
+  height: 150px;
 }
 
 a {
@@ -56,13 +40,3 @@ a:hover{
 .row {
   display: inline-block;;
 }
-// .col-md-3 {
-//   display: inline-block;
-// }
-// .col-xs-6 {
-//   display: inline-block;
-// }
-
-// Place all the styles related to the Products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
