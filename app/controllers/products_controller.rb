@@ -17,11 +17,24 @@ def index
       if @products.exists?(id)
         product = @products.find(id)
         product.quantity = quantity
-          product.price = (quantity * product.price)
+        product.price = (quantity * product.price)
         @cart << product
+        @totalprice = totalprice
+      end
+
+      def totalprice
+        sum = 0.0
+        @cart.each do |product|
+        sum += product.price
+        end
+
+        return sum
+
       end
     end
   end
+
+
 
   # GET /products/1
   # GET /products/1.json
