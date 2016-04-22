@@ -11,11 +11,20 @@ before_filter :ensure_session
 
 
   def update
-    
+    quantity = 1
+    session[:shopping_cart][product_id] += quantity
+    redirect_to cartoverview_path 
+  end
+
+  def increase
+
   end
 
   def destroy
+     session[:shopping_cart] = nil
+     redirect_to cartoverview_path
   end
+
 
   protected
 
