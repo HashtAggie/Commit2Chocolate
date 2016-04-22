@@ -10,7 +10,9 @@ class ProductsController < ApplicationController
     else
        print "Sorry your product is not here. Try again!"
     end
+end
 
+def cartoverview
     @cart = []
     @totalprice = 0.0
     session[:shopping_cart].each do |id, quantity|
