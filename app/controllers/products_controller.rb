@@ -7,8 +7,9 @@ def index
   @products = Product.all
     if params[:search]
       @products = Product.search(params[:search])
-    else
+    else @products.empty?
        print "Sorry your product is not here. Try again!"
+
     end
 
     @cart = []
