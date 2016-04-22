@@ -1,6 +1,5 @@
 class ShoppingCartItemsController < ApplicationController
   def create
-    session[:shopping_cart] ||= {}
     product_id = shopping_cart_item_params[:product_id]
     quantity = shopping_cart_item_params[:quantity].to_i
     session[:shopping_cart][product_id] ||= 0
