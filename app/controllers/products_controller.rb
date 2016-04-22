@@ -10,9 +10,7 @@ class ProductsController < ApplicationController
     else
        print "Sorry your product is not here. Try again!"
     end
-end
 
-def cartoverview
     @cart = []
     @totalprice = 0.0
     session[:shopping_cart].each do |id, quantity|
@@ -25,6 +23,23 @@ def cartoverview
         }
       end
     end
+end
+
+def cartoverview
+
+  @cart = []
+  @totalprice = 0.0
+  session[:shopping_cart].each do |id, quantity|
+    if Product.exists?(id)
+      product = Product.find(id)
+      @totalprice += (quantity * product.price)
+      @cart << {
+        product: product,
+        quantity: quantity
+      }
+    end
+  end
+
   end
 
 

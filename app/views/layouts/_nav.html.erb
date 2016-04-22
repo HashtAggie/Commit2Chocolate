@@ -16,11 +16,10 @@
        </ul>
 
        <ul class="nav navbar-nav navbar-right">
-         <button class="btn btn-default btn-xs" type="button">
-           Messages <span class="badge">0</span>
+         <button class="btn btn-default btn-xs" type="button"><span class="glyphicon glyphicon-shopping-cart"></span>
+           <%= link_to "€ #{@totalprice}", cartoverview_path %>
          </button>
           <% if current_user %>
-            <li><%= "Your Profile"%></li>
             <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
             <% else %>
             <li><%= link_to "Log in",  user_session_path %> </li>
