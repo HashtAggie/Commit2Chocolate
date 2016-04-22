@@ -1,4 +1,6 @@
 class ShoppingCartItemsController < ApplicationController
+before_filter :ensure_session
+
   def create
     product_id = shopping_cart_item_params[:product_id]
     quantity = shopping_cart_item_params[:quantity].to_i
