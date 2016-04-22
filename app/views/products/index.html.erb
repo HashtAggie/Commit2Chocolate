@@ -37,9 +37,9 @@
 <footer>
   <div>
     <p>In shopping cart:</p>
-    <% @cart.each do |product| %>
-    <p><%= product.quantity %> x <%= product.name %> </p>
-    <p>€ <%= product.price %></p>
+    <% @cart.each do |order| %>
+    <p><%= order[:quantity] %> x <%= order[:product].name %> </p>
+    <p>€ <%= order[:product].price %></p>
     <% end %>
     <p> € <%= @totalprice %> </p>
   </div>
