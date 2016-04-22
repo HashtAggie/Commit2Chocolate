@@ -1,35 +1,26 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
   # GET /products
   # GET /products.json
-def index
-  @products = Product.all
+  def index
+    @products = Product.all
+
     if params[:search]
       @products = Product.search(params[:search])
     else
        print "Sorry your product is not here. Try again!"
-
     end
 
     @cart = []
+    @totalprice = 0.0
     session[:shopping_cart].each do |id, quantity|
-      if @products.exists?(id)
-        product = @products.find(id)
-        product.quantity = quantity
-        product.price = (quantity * product.price)
-        @cart << product
-        @totalprice = totalprice
-      end
-
-      def totalprice
-        sum = 0.0
-        @cart.each do |product|
-        sum += product.price
-        end
-
-        return sum
-
+      if Product.exists?(id)
+        product = Product.find(id)
+        @totalprice += (quantity * product.price)
+        @cart << {
+          product: product,
+          quantity: quantity
+        }
       end
     end
   end
