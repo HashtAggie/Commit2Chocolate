@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   resources :products
   resources :shopping_cart_items
  #  Rails.application.routes.draw do
-
-
+  get 'user_reviews/:user_id' => 'reviews#user', as: :user_reviews
+  get 'cartoverview' => 'products#cartoverview'
   get 'shopping_cart_items/create'
 
   get 'shopping_cart_items/update'

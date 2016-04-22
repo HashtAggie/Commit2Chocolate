@@ -11,6 +11,7 @@ before_filter :ensure_session
 
 
   def update
+    
   end
 
   def destroy
