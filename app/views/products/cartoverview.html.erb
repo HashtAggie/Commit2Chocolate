@@ -1,9 +1,10 @@
-<p>In shopping cart:</p>
+<h2>In shopping cart:</h2>
 <% @cart.each do |order| %>
 <p><%= order[:quantity] %> x <%= order[:product].name %> </p>
 <p>€ <%= order[:product].price %></p>
 <% end %>
-<p>Total price</p>
-<p> € <%= @totalprice %> </p>
-<%= link_to 'Empty cart', shopping_cart_items_destroy_path, method: :delete %>
-<%= link_to 'Add 1', shopping_cart_items_update_path, method: :update %>
+<h3>Total price</strong></h3>
+<h3> € <%= @totalprice %> </h3>
+
+<%=link_to "Back", products_path, class: "btn btn-default"%>
+<%= link_to 'Empty cart', shopping_cart_items_destroy_path,class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
