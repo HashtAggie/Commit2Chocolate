@@ -9,6 +9,7 @@ def index
       @products = Product.search(params[:search])
     else
        print "Sorry your product is not here. Try again!"
+
     end
 
     @cart = []
