@@ -11,18 +11,7 @@ class ProductsController < ApplicationController
        print "Sorry your product is not here. Try again!"
     end
 
-    @cart = []
-    @totalprice = 0.0
-    session[:shopping_cart].each do |id, quantity|
-      if Product.exists?(id)
-        product = Product.find(id)
-        @totalprice += (quantity * product.price)
-        @cart << {
-          product: product,
-          quantity: quantity
-        }
-      end
-    end
+    cartoverview
 end
 
 def cartoverview
@@ -48,6 +37,7 @@ def cartoverview
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
+    cartoverview
   end
 
   # GET /products/new
